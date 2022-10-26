@@ -1,9 +1,7 @@
-let username = 'John';
-console.log(username);
-
-let a: number = 12;
-let b: string = '6';
-let c: number = 2;
-
-//console.log(a / b); //problem
-//console.log(c * b); //problem
+let myName: string = 'PR';
+let meaningOfLife: number;
+let isLoading: boolean;
+let album: any;
+let postId: string | number; //union type (is not limited)
+let isActive: number | boolean; // 0 or false
+let re: RegExp = /\w+/g;
