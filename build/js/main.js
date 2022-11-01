@@ -66,3 +66,13 @@ var Grade;
     Grade[Grade["B"] = 5] = "B";
 })(Grade || (Grade = {}));
 console.log(Grade.D);
+// do not with interface
+//inteface use for classses or objects
+//interface PostId = stringOrNumber // not work
+// ------------------------
+// Literal Types
+// ------------------------
+let myNameIs;
+//myNameIs = 'Gates'; //not wok
+let userName;
+userName = 'Astro'; // we can choose the userName with help of intellisense

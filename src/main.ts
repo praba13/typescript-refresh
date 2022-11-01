@@ -99,3 +99,33 @@ enum Grade {
 }
 
 console.log(Grade.D);
+
+// ------------------------
+// Type Aliases
+// ------------------------
+
+type stringOrNumber = string | number;
+type stringOrNumberArray = (string | number)[];
+
+type Guitarist2 = {
+  name: string;
+  active?: boolean; //property optional
+  albums: stringOrNumberArray;
+};
+
+type UserId = stringOrNumber;
+
+// do not with interface
+//inteface use for classses or objects
+//interface PostId = stringOrNumber // not work
+
+// ------------------------
+// Literal Types
+// ------------------------
+
+let myNameIs: 'Bill';
+//myNameIs = 'Gates'; //not wok
+
+let userName: 'Sokrates' | 'Astro' | 'Jupitar';
+
+userName = 'Astro'; // we can choose the userName with help of intellisense
