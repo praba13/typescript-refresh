@@ -76,3 +76,40 @@ let myNameIs;
 //myNameIs = 'Gates'; //not wok
 let userName;
 userName = 'Astro'; // we can choose the userName with help of intellisense
+// ------------------------
+// FUNCTIONS
+// ------------------------
+console.log('----------FUNCTIONS---------');
+// return number
+const add = (a, b) => {
+    return a + b;
+};
+const logMsg = (message) => {
+    console.log(message);
+};
+logMsg('Hallo!');
+logMsg(add(2, 3));
+let subtract = function (c, d) {
+    return c - d;
+};
+let multiply = function (c, d) {
+    return c * d;
+};
+logMsg(multiply(10, 5));
+console.log('--------OPTIONAL PARAM. FUNCTIONS---------');
+// optional Paramter
+const addAll = (a, b, c) => {
+    if (typeof c !== 'undefined') {
+        return a + b + c;
+    }
+    return a + b;
+};
+logMsg(addAll(2, 3));
+logMsg(addAll(2, 3, 5));
+console.log('----------REST PARAM. FUNCTIONS-----------');
+const total = (a, ...nums) => {
+    return a + nums.reduce((prev, curr) => prev + curr);
+};
+logMsg(total(1, 2, 3, 4));
+logMsg(total(1, 2));
+console.log('----------NEVER TYPE FUNCTIONS-----------');

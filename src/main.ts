@@ -55,6 +55,7 @@ type Guitarist = {
   albums: (string | number)[];
 };
 */
+
 //type and interface
 interface Guitarist {
   name?: string;
@@ -129,3 +130,57 @@ let myNameIs: 'Bill';
 let userName: 'Sokrates' | 'Astro' | 'Jupitar';
 
 userName = 'Astro'; // we can choose the userName with help of intellisense
+
+// ------------------------
+// FUNCTIONS
+// ------------------------
+
+console.log('----------FUNCTIONS---------');
+
+// return number
+const add = (a: number, b: number): number => {
+  return a + b;
+};
+
+const logMsg = (message: any): void => {
+  console.log(message);
+};
+
+logMsg('Hallo!');
+logMsg(add(2, 3));
+
+let subtract = function (c: number, d: number): number {
+  return c - d;
+};
+
+type mathfunction = (a: number, b: number) => number;
+
+let multiply: mathfunction = function (c, d) {
+  return c * d;
+};
+
+logMsg(multiply(10, 5));
+
+console.log('--------OPTIONAL PARAM. FUNCTIONS---------');
+
+// optional Paramter
+const addAll = (a: number, b: number, c?: number): number => {
+  if (typeof c !== 'undefined') {
+    return a + b + c;
+  }
+  return a + b;
+};
+
+logMsg(addAll(2, 3));
+logMsg(addAll(2, 3, 5));
+
+console.log('----------REST PARAM. FUNCTIONS-----------');
+
+const total = (a: number, ...nums: number[]): number => {
+  return a + nums.reduce((prev, curr) => prev + curr);
+};
+
+logMsg(total(1, 2, 3, 4));
+logMsg(total(1, 2));
+
+console.log('----------NEVER TYPE FUNCTIONS-----------');
