@@ -184,3 +184,13 @@ logMsg(total(1, 2, 3, 4));
 logMsg(total(1, 2));
 
 console.log('----------NEVER TYPE FUNCTIONS-----------');
+
+const createError = (errMsg: string): never => {
+  throw new Error(errMsg);
+};
+
+const numberOrString = (value: number | string): string => {
+  if (typeof value === 'string') return 'string';
+  if (typeof value === 'number') return 'number';
+  return createError('This should never happend!');
+};
