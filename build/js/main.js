@@ -123,3 +123,28 @@ const numberOrString = (value) => {
         return 'number';
     return createError('This should never happend!');
 };
+console.log('-----Type Asssertions---------');
+//convert to more or less specific
+let a = 'hello';
+let b = a;
+let c = a;
+let d = 'world';
+let e = 'world';
+const addOrConcat = (a, b, c) => {
+    if (c === 'add')
+        return a + b;
+    return '' + a + b;
+};
+let myVal = addOrConcat(2, 2, 'concat');
+//Careful, TS sees no problem - but a string is returned
+let nextVal = addOrConcat(2, 2, 'concat');
+console.log(myVal);
+//10 as string; // not happy
+//10 as unknown as string;
+//DOM
+//const img = document.querySelector('img');
+const img = document.querySelector('img');
+const myImg = document.querySelector('#img');
+const nextImg = document.getElementById('#img');
+img.src;
+myImg.src;
