@@ -16,5 +16,22 @@ class Coder {
 }
 const Bill = new Coder('Dave', 'Rock', 42);
 console.log(Bill.getAge());
+console.log(Bill);
 //console.log(Bill.age);
 //console.log(Bill.lang);
+class WebDev extends Coder {
+    constructor(computer, name, music, age) {
+        super(name, music, age);
+        this.computer = computer;
+        this.computer = computer;
+    }
+    getLang() {
+        return `I write ${this.lang}.`;
+    }
+}
+const Gates = new WebDev('Linux', 'Gates', 'Jazz', 44);
+console.log(Gates);
+console.log(Gates.getLang());
+console.log(Gates.name);
+//console.log(Gates.age);
+//console.log(Gates.lang);
