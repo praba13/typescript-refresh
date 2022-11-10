@@ -46,3 +46,26 @@ console.log(Gates.getLang());
 console.log(Gates.name);
 //console.log(Gates.age);
 //console.log(Gates.lang);
+
+// INTERFACE
+console.log('=============Interface===========');
+interface Musician {
+  namee: string;
+  instrument: string;
+  play(action: string): string;
+}
+
+class Guitarist implements Musician {
+  namee: string;
+  instrument: string;
+
+  constructor(namee: string, instrument: string) {
+    (this.namee = namee), (this.instrument = instrument);
+  }
+  play(action: string): string {
+    return `${this.namee} ${action} the ${this.instrument}`;
+  }
+}
+
+const Jack = new Guitarist('Adam', 'guitar');
+console.log(Jack.play('drums'));
