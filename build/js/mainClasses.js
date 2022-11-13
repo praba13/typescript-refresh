@@ -47,3 +47,46 @@ class Guitarist {
 }
 const Jack = new Guitarist('Adam', 'guitar');
 console.log(Jack.play('drums'));
+// STATIC
+console.log('=============STATIC===========');
+class Peeps {
+    constructor(name) {
+        this.name = name;
+        this.name = name;
+        this.id = ++Peeps.count;
+    }
+    static getCount() {
+        return Peeps.count;
+    }
+}
+Peeps.count = 0;
+const John = new Peeps('John');
+const Neo = new Peeps('Neo');
+const Kasa = new Peeps('Kasa');
+console.log("Neo's id is " + Neo.id);
+console.log(Peeps.count);
+console.log(Peeps.getCount());
+console.log('=============SETTERS/GETTERS===========');
+class Bands {
+    constructor() {
+        this.dataState = [];
+    }
+    get data() {
+        return this.dataState;
+    }
+    set data(value) {
+        if (Array.isArray(value) && value.every((el) => typeof el === 'string')) {
+            this.dataState = value;
+            return;
+        }
+        else
+            throw new Error('Paramis not an array of string');
+    }
+}
+const MyBands = new Bands();
+MyBands.data = ['Michael Jackson', 'David'];
+console.log(MyBands.data);
+MyBands.data = [...MyBands.data, 'Metalica'];
+console.log(MyBands.data);
+//MyBands.data = [...MyBands.data, 562];
+//console.log(MyBands.data);
