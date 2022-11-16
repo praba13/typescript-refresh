@@ -63,6 +63,7 @@ interface Guitarist {
   albums: (string | number)[];
 }
 
+/*
 let evh: Guitarist = {
   name: 'Paul',
   active: false,
@@ -75,9 +76,10 @@ let jp: Guitarist = {
   albums: ['I', 'II', 'III']
 };
 
+*/
 //evh = jp;
 //jp = evh;
-console.log(jp);
+//console.log(jp);
 
 //Object Type as Parameter
 
@@ -88,7 +90,7 @@ const greetGuitarist = (guitarist: Guitarist) => {
   return 'Holla!!';
 };
 
-console.log(greetGuitarist(jp));
+//console.log(greetGuitarist(jp));
 
 //ENUMS, start with 0 but we can manully manupulate starting postion
 enum Grade {

@@ -35,19 +35,23 @@ const exampleObj = {
 exampleObj.prop1 = 'Hans';
 //exampleObj.prop1 = 23; // das geht nicht
 console.log(exampleObj);
-let evh = {
-    name: 'Paul',
-    active: false,
-    albums: [32, 42, 'Trog']
+/*
+let evh: Guitarist = {
+  name: 'Paul',
+  active: false,
+  albums: [32, 42, 'Trog']
 };
-let jp = {
-    name: 'Jimmy',
-    active: true,
-    albums: ['I', 'II', 'III']
+
+let jp: Guitarist = {
+  name: 'Jimmy',
+  active: true,
+  albums: ['I', 'II', 'III']
 };
+
+*/
 //evh = jp;
 //jp = evh;
-console.log(jp);
+//console.log(jp);
 //Object Type as Parameter
 const greetGuitarist = (guitarist) => {
     if (guitarist.name) {
@@ -55,7 +59,7 @@ const greetGuitarist = (guitarist) => {
     }
     return 'Holla!!';
 };
-console.log(greetGuitarist(jp));
+//console.log(greetGuitarist(jp));
 //ENUMS, start with 0 but we can manully manupulate starting postion
 var Grade;
 (function (Grade) {
